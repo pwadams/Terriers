@@ -1,0 +1,10 @@
+  <%= link_to "Add New", new_terrier_path %>
+
+  <% @terriers.each do |terrier| %>
+
+  <%= link_to terrier.name, terrier_path(terrier) %>
+  <%= terrier.breeds %>
+
+  <%= link_to "delete", terrier_path(terrier), method: "delete" %>
+
+  <% end %>
